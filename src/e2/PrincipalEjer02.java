@@ -45,6 +45,7 @@ public class PrincipalEjer02 extends Applet  implements ActionListener {
     @Override
     public void update(Graphics g) {
         // Mostramos el sistema
+
         this.paint(g);
     }
 

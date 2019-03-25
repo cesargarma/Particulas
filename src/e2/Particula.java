@@ -29,7 +29,8 @@ public class Particula {
         }
         this.tipo = rnd.nextInt(2); //0-> circulo / 1-> cuadrado
         this.tamaño = rnd.nextInt(11)+6; //6-16
-        this.direccion = rnd.nextInt(4); //0-3
+        //this.direccion = rnd.nextInt(4); //0-3
+        this.direccion = 2;
     }
 
     public void mover () {
@@ -39,6 +40,12 @@ public class Particula {
            case 2:  this.pos.izda(); break;
            case 3:  this.pos.drcha(); break;
        }
+    }
+
+    public void reboteIzdaDer (){
+        if(this.pos.getX() <= 10){
+            this.direccion = 3;
+        }
     }
 
     public void dibujar (Graphics g) {

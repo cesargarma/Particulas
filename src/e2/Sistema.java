@@ -13,7 +13,7 @@ public class Sistema {
         //p1= new Particula(10,10);
         Random rnd = new Random();
 
-        for (int i = 0; i < 5000; i++) {
+        for (int i = 0; i < 500; i++) {
             int x = rnd.nextInt(ancho-20);
             int y = rnd.nextInt(alto-20);
             Particula p = new Particula(x,y);
@@ -32,6 +32,7 @@ public class Sistema {
         //p1.mover();
         for (Particula p: lista) {
             p.mover();
+            p.reboteIzdaDer();
         }
     }
 }

@@ -32,7 +32,7 @@ public class Sistema {
         //p1.mover();
         for (Particula p: lista) {
             p.mover();
-            p.reboteIzdaDer();
+            p.rebotes(ancho, alto);
         }
     }
 }

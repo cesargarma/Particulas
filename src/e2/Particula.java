@@ -29,8 +29,8 @@ public class Particula {
         }
         this.tipo = rnd.nextInt(2); //0-> circulo / 1-> cuadrado
         this.tamaño = rnd.nextInt(11)+6; //6-16
-        //this.direccion = rnd.nextInt(4); //0-3
-        this.direccion = 2;
+        this.direccion = rnd.nextInt(4); //0-3
+        //this.direccion = 2;
     }
 
     public void mover () {
@@ -42,9 +42,34 @@ public class Particula {
        }
     }
 
+    public void rebotes(int ancho, int alto){
+        reboteIzdaDer();
+        reboteDerIzda(ancho);
+        reboteAbaArr(alto);
+        reboteArrAba();
+    }
+
     public void reboteIzdaDer (){
         if(this.pos.getX() <= 10){
             this.direccion = 3;
+        }
+    }
+
+    public void reboteDerIzda (int ancho){
+        if(this.pos.getX() >= ancho-20){
+            this.direccion = 2;
+        }
+    }
+
+    public void reboteArrAba (){
+        if(this.pos.getY() <= 10){
+            this.direccion = 0;
+        }
+    }
+
+    public void reboteAbaArr (int alto){
+        if(this.pos.getY() >= alto-20){
+            this.direccion = 1;
         }
     }
 

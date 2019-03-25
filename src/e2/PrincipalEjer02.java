@@ -30,7 +30,7 @@ public class PrincipalEjer02 extends Applet  implements ActionListener {
         Graphics dd = img.getGraphics();
 
         // Mensaje central
-        String s = "DAM1 CMA> Ejercicio 1";
+        String s = "DAM1 CMA> Ejercicio 2 (500 partículas)";
         int width = g.getFontMetrics().stringWidth(s);
         dd.drawString(s, this.getWidth()/2-width/2, this.getHeight()/2);
 

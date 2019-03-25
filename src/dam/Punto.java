@@ -60,10 +60,44 @@ public class Punto {
         this.abajo(1);
     }
 
+    //////////////////////
+    //mover hacia arriba//
+    //////////////////////
+    public void arriba(int desp) {
+        this.y -= Math.abs(desp);
+    }
+    //sobrecarga
+    public void arriba() {
+        this.arriba(1);
+    }
+
+    ///////////////////////
+    //mover hacia derecha//
+    ///////////////////////
+    public void drcha(int desp) {
+        this.x += Math.abs(desp);
+    }
+    //sobrecarga
+    public void drcha() {
+        this.drcha(1);
+    }
+
+    ////////////////////
+    //mover hacia izda//
+    ////////////////////
+    public void izda(int desp) {
+        this.x -= Math.abs(desp);
+    }
+    //sobrecarga
+    public void izda() {
+        this.izda(1);
+    }
 
 
     @Override
     public String toString() {
         return "("+x+","+y+")";
     }
+
+
 }

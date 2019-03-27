@@ -42,7 +42,7 @@ public class Sistema {
         if(this.reloj % 100 == 0){
             this.cambiarSentido();
         }
-        if(this.reloj<10000){
+        if(this.reloj>10000){
             this.reloj = 0;
         }
     }

@@ -16,11 +16,13 @@ public class Particula {
     private int direccion = 0;
     private int velocidad = 0;
 
+    Random rnd = new Random();
+
     ///////////////
     //CONSTRUCTOR//
     ///////////////
     public Particula(int x, int y) {
-        Random rnd = new Random();
+
         pos = new Punto(x,y);
         switch(rnd.nextInt(4)) {
             case 0: this.color = Color.RED; break;
@@ -119,6 +121,7 @@ public class Particula {
 
     public void cambiarSentido(){
         this.direccion++;
+        this.velocidad = rnd.nextInt(10)+1;
         if(this.direccion>=8) this.direccion=0;
     }
 

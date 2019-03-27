@@ -93,6 +93,49 @@ public class Punto {
         this.izda(1);
     }
 
+    /////////////////////////////////
+    //Mover diagonal derecha-arriba//
+    /////////////////////////////////
+    public void derArr(int desp){
+        this.x += Math.abs(desp);
+        this.y -= Math.abs(desp);
+    }
+    public void derArr(){
+        this.derArr(1);
+    }
+
+    ////////////////////////////////
+    //Mover diagonal derecha-abajo//
+    ////////////////////////////////
+    public void derAb(int desp){
+        this.x += Math.abs(desp);
+        this.y += Math.abs(desp);
+    }
+    public void derAb(){
+        this.derAb(1);
+    }
+
+    ///////////////////////////////////
+    //Mover diagonal izquierda-arriba//
+    ///////////////////////////////////
+    public void izqArr(int desp){
+        this.x -= Math.abs(desp);
+        this.y -= Math.abs(desp);
+    }
+    public void izqArr(){
+        this.izqArr(1);
+    }
+
+    ///////////////////////////////////
+    //Mover diagonal izquierda-abajo//
+    ///////////////////////////////////
+    public void izqAb(int desp){
+        this.x -= Math.abs(desp);
+        this.y += Math.abs(desp);
+    }
+    public void izqAb(){
+        this.izqAb(1);
+    }
 
     @Override
     public String toString() {

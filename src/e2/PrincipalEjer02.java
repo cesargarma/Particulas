@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 public class PrincipalEjer02 extends Applet  implements ActionListener {
 
     private static final long serialVersionUID = 1L;
+
     Sistema sis = null;
 
     @Override

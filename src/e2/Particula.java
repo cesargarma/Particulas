@@ -57,64 +57,69 @@ public class Particula {
     }*/
 
     private void reboteDiagIzqArr(int alto) {
-        if(this.pos.getX() <= 10){
+        if(this.pos.getX()+this.tamaño <= 20){
             this.direccion = 4;
         }
-        if(this.pos.getY() <=  20){
+        if(this.pos.getY()+this.tamaño <=  20){
             this.direccion = 6;
         }
     }
 
     private void reboteDiagIzqAb(int alto) {
-        if(this.pos.getX() <= 10){
+        if(this.pos.getX()+this.tamaño <= 20){
             this.direccion = 5;
         }
-        if(this.pos.getY() >= alto - 20){
+        if(this.pos.getY()+this.tamaño >= alto - 20){
             this.direccion = 7;
         }
     }
 
     private void reboteDiagDerAb(int ancho, int alto) {
-        if(this.pos.getX() >= ancho-20){
+        if(this.pos.getX()+this.tamaño >= ancho-20){
             this.direccion = 6;
         }
-        if(this.pos.getY() >= alto - 20){
+        if(this.pos.getY()+this.tamaño >= alto - 20){
             this.direccion = 4;
         }
     }
 
     private void reboteDiagDerArr(int ancho){
-        if(this.pos.getX() >= ancho-20){
+        if(this.pos.getX()+this.tamaño >= ancho-20){
             this.direccion = 7;
         }
-        if(this.pos.getY() <= 10){
+        if(this.pos.getY()+this.tamaño <= 10){
             this.direccion = 5;
         }
 
     }
 
     private void reboteIzdaDer (){
-        if(this.pos.getX() <= 10){
+        if(this.pos.getX()+this.tamaño <= 20){
             this.direccion = 3;
         }
     }
 
     private void reboteDerIzda (int ancho){
-        if(this.pos.getX() >= ancho-20){
+        if(this.pos.getX()+this.tamaño >= ancho-20){
             this.direccion = 2;
         }
     }
 
     private void reboteArrAba (){
-        if(this.pos.getY() <= 10){
+        if(this.pos.getY()+this.tamaño <= 10){
             this.direccion = 0;
         }
     }
 
     private void reboteAbaArr (int alto){
-        if(this.pos.getY() >= alto-20){
+        if(this.pos.getY()+this.tamaño >= alto-20){
             this.direccion = 1;
         }
+    }
+
+    public void cambiarSentido(){
+        this.direccion++;
+        if(this.direccion>=8) this.direccion=0;
     }
 
     public void dibujar (Graphics g) {

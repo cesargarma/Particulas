@@ -10,6 +10,7 @@ public class PrincipalEjer02 extends Applet  implements ActionListener {
 
     private static final long serialVersionUID = 1L;
 
+
     Sistema sis = null;
 
     @Override
@@ -18,9 +19,10 @@ public class PrincipalEjer02 extends Applet  implements ActionListener {
 
         this.setSize(600, 600); // Tamaño de la ventana
 
+        Timer t = new Timer(1000/25, this);
+
         sis = new Sistema(this.getWidth(), this.getHeight());
 
-        Timer t = new Timer(1000/25, this);
         t.start();
     }
 

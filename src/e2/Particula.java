@@ -14,6 +14,7 @@ public class Particula {
     private int tipo = 0;
     private int tamaño = 0;
     private int direccion = 0;
+    private int velocidad = 0;
 
     ///////////////
     //CONSTRUCTOR//
@@ -30,15 +31,15 @@ public class Particula {
         this.tipo = rnd.nextInt(2); //0-> circulo / 1-> cuadrado
         this.tamaño = rnd.nextInt(11)+6; //6-16
         this.direccion = rnd.nextInt(4); //0-3
-        //this.direccion = 2;
+        this.velocidad = rnd.nextInt(10)+1; //1-10
     }
 
     public void mover () {
        switch(this.direccion){
-           case 0:  this.pos.abajo(); break;
-           case 1:  this.pos.arriba(); break;
-           case 2:  this.pos.izda(); break;
-           case 3:  this.pos.drcha(); break;
+           case 0:  this.pos.abajo(velocidad); break;
+           case 1:  this.pos.arriba(velocidad); break;
+           case 2:  this.pos.izda(velocidad); break;
+           case 3:  this.pos.drcha(velocidad); break;
        }
     }
 

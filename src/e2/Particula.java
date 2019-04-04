@@ -25,15 +25,15 @@ public class Particula {
 
         pos = new Punto(x,y);
         switch(rnd.nextInt(4)) {
-            case 0: this.color = Color.RED; break;
+            case 0: this.color = Color.ORANGE; break;
             case 1: this.color = Color.BLUE; break;
             case 2: this.color = Color.GREEN; break;
-            case 3: this.color = Color.ORANGE; break;
+            case 3: this.color = Color.MAGENTA; break;
         }
         this.tipo = rnd.nextInt(2); //0-> circulo / 1-> cuadrado
         this.tamaño = rnd.nextInt(11)+6; //6-16
         this.direccion = rnd.nextInt(8); //0-7
-        this.velocidad = rnd.nextInt(10)+1; //1-10
+        this.velocidad = rnd.nextInt(5)+1; //1-10
     }
 
     public void mover (int ancho, int alto) {
@@ -121,7 +121,7 @@ public class Particula {
 
     public void cambiarSentido(){
         this.direccion++;
-        this.velocidad = rnd.nextInt(10)+1;
+        this.velocidad = rnd.nextInt(5)+1;
         if(this.direccion>=8) this.direccion=0;
     }
 
